@@ -16,6 +16,8 @@ def notify():
 
     # Notification Tool
 
+    print result
+
     notify2.init("Cryptocurrency rates notifier")
     n = notify2.Notification("Crypto Notifier")
     n.update("Rates Details", result)

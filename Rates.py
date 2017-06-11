@@ -70,3 +70,4 @@ def fetch_monero():
 
     return monero_li
 
+fetch_bitcoin()
