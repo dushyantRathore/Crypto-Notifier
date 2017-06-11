@@ -16,7 +16,7 @@ def fetch_bitcoin():
             bitcoin_li.append(td.text)
 
     del bitcoin_li[3:]
-
+    bitcoin_li = map(lambda s : s.strip(), bitcoin_li)
     return bitcoin_li
 
 
@@ -33,7 +33,7 @@ def fetch_ethereum():
             ethereum_li.append(td.text)
 
     del ethereum_li[3:]
-
+    ethereum_li = map(lambda s : s.strip(), ethereum_li)
     return ethereum_li
 
 
@@ -50,7 +50,7 @@ def fetch_litecoin():
             litecoin_li.append(td.text)
 
     del litecoin_li[3:]
-
+    litecoin_li = map(lambda s : s.strip(), litecoin_li)
     return litecoin_li
 
 
@@ -67,7 +67,7 @@ def fetch_monero():
             monero_li.append(td.text)
 
     del monero_li[3:]
-
+    monero_li = map(lambda s : s.strip(), monero_li)
     return monero_li
 
 fetch_bitcoin()
