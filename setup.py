@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(
-    name='Crypto-Notfier',
+    name='Crypto-Notifier',
     version='1.0.1',
     description='Get the latest conversion rates of Cryptocurrencies to INR',
     long_description='This python package notifies the user of the conversion rates of popular Cryptocurrencies',
