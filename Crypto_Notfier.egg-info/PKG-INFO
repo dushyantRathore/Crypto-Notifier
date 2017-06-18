@@ -16,5 +16,6 @@ Classifier: Intended Audience :: Information Technology
 Classifier: Natural Language :: English
 Classifier: Topic :: Software Development :: Build Tools
 Classifier: License :: OSI Approved :: MIT License
-Classifier: Programming Language :: Python :: 2Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
 Classifier: Programming Language :: Python :: 2.7
