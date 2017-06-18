@@ -17,7 +17,7 @@ def fetch_bitcoin():
 
     del bitcoin_li[3:]
     bitcoin_li = map(lambda s : s.strip(), bitcoin_li)
-    print bitcoin_li
+    # print bitcoin_li
     return bitcoin_li
 
 
@@ -35,7 +35,7 @@ def fetch_ethereum():
 
     del ethereum_li[3:]
     ethereum_li = map(lambda s : s.strip(), ethereum_li)
-    print ethereum_li
+    # print ethereum_li
     return ethereum_li
 
 
@@ -72,5 +72,5 @@ def fetch_monero():
     monero_li = map(lambda s : s.strip(), monero_li)
     return monero_li
 
-fetch_bitcoin()
-fetch_ethereum()
+# fetch_bitcoin()
+# fetch_ethereum()
