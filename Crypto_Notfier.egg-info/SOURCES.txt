@@ -1,0 +1,10 @@
+setup.py
+Crypto_Notfier.egg-info/PKG-INFO
+Crypto_Notfier.egg-info/SOURCES.txt
+Crypto_Notfier.egg-info/dependency_links.txt
+Crypto_Notfier.egg-info/entry_points.txt
+Crypto_Notfier.egg-info/requires.txt
+Crypto_Notfier.egg-info/top_level.txt
+cryptonotifier/Main.py
+cryptonotifier/Rates.py
+cryptonotifier/__init__.py

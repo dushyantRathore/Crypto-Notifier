@@ -28,11 +28,14 @@ setup(
     keywords="Cryptocurrency notifier",
     author_email='dushyant.bgs@gmail.com',
     url='https://github.com/dushyantRathore/Crypto-Notifier',
-    packages=["crypto-notifier"],
-    scripts=["CN/Main.py"],
+    packages=["cryptonotifier"],
     install_requires=[
         "requests<=2.11.1",
         "beautifulsoup4",
         "notify2"
-    ]
+    ],
+entry_points={
+        'console_scripts':
+            ['cryptonotifier = cryptonotifier.Main:notify']
+    }
 )
