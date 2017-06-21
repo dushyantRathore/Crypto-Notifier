@@ -17,7 +17,7 @@ def fetch_bitcoin():
 
     del bitcoin_li[3:]
     bitcoin_li = map(lambda s : s.strip(), bitcoin_li)
-    # print bitcoin_li
+    print bitcoin_li
     return bitcoin_li
 
 
@@ -35,7 +35,7 @@ def fetch_ethereum():
 
     del ethereum_li[3:]
     ethereum_li = map(lambda s : s.strip(), ethereum_li)
-    # print ethereum_li
+    print ethereum_li
     return ethereum_li
 
 
@@ -53,6 +53,9 @@ def fetch_litecoin():
 
     del litecoin_li[3:]
     litecoin_li = map(lambda s : s.strip(), litecoin_li)
+
+    print litecoin_li
+
     return litecoin_li
 
 
@@ -70,7 +73,33 @@ def fetch_monero():
 
     del monero_li[3:]
     monero_li = map(lambda s : s.strip(), monero_li)
+
+    print monero_li
+
     return monero_li
 
-# fetch_bitcoin()
-# fetch_ethereum()
+
+def fetch_ripple():
+    url = "https://www.coingecko.com/en/price_charts/ripple/inr"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    ripple_file = requests.get(url)
+    soup = BeautifulSoup(ripple_file.text, "html.parser")
+
+    ripple_li = []
+
+    for table in soup.find_all("table", attrs={"class": "table"}):
+        for td in table.find_all("td"):
+            ripple_li.append(td.text)
+
+    del ripple_li[3:]
+    ripple_li = map(lambda s: s.strip(), ripple_li)
+
+    print ripple_li
+
+    return ripple_li
+
+fetch_bitcoin()
+fetch_ethereum()
+fetch_litecoin()
+fetch_monero()
+fetch_ripple()

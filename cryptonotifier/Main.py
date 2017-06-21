@@ -10,12 +10,14 @@ def notify():
     ethereum = Rates.fetch_ethereum()
     litecoin = Rates.fetch_litecoin()
     monero = Rates.fetch_monero()
+    ripple = Rates.fetch_ripple()
 
     result = ""
     result = result + str(bitcoin[0]) + "  -  " + str(bitcoin[2].encode('utf-8')) + "\n"
     result = result + str(ethereum[0]) + "  -  " + str(ethereum[2].encode('utf-8')) + "\n"
     result = result + str(litecoin[0]) + "  -  " + str(litecoin[2].encode('utf-8')) + "\n"
     result = result + str(monero[0]) + "  -  " + str(monero[2].encode('utf-8')) + "\n"
+    result = result + str(ripple[0]) + "  -  " + str(ripple[2].encode('utf-8')) + "\n"
 
     # Notification Tool
 
