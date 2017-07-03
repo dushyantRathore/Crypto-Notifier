@@ -98,8 +98,22 @@ def fetch_ripple():
 
     return ripple_li
 
-fetch_bitcoin()
-fetch_ethereum()
-fetch_litecoin()
-fetch_monero()
-fetch_ripple()
+
+def fetch_dash():
+    url = "https://www.coingecko.com/en/price_charts/dash/inr"
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    ripple_file = requests.get(url)
+    soup = BeautifulSoup(ripple_file.text, "html.parser")
+
+    dash_li = []
+
+    for table in soup.find_all("table", attrs={"class": "table"}):
+        for td in table.find_all("td"):
+            dash_li.append(td.text)
+
+    del dash_li[3:]
+    dash_li = map(lambda s: s.strip(), dash_li)
+
+    print dash_li
+
+    return dash_li
