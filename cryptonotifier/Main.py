@@ -21,12 +21,12 @@ def notify():
     result = result + str(ripple[0]) + "  -  " + str(ripple[2].encode('utf-8')) + "\n"
     result = result + str(dash[0]) + "  -  " + str(dash[2].encode('utf-8')) + "\n"
 
-    # Notification Tool
-
-    # print result
+    print result
 
     notify2.init("Cryptocurrency rates notifier")
     n = notify2.Notification("Crypto Notifier", icon=icon_path)
+    n.set_urgency(notify2.URGENCY_NORMAL)
+    n.set_timeout(1000)
     n.update("Current Rates", result)
     n.show()
 
