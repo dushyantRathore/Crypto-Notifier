@@ -6,20 +6,18 @@ def notify():
 
     icon_path = "/home/dushyant/Desktop/Github/Crypto-Notifier/logo.jpg"
 
-    bitcoin = Rates.fetch_coin('bitcoin')
-    ethereum = Rates.fetch_coin('ethereum')
-    litecoin = Rates.fetch_coin('litecoin')
-    monero = Rates.fetch_coin('monero')
-    ripple = Rates.fetch_coin('ripple')
-    dash = Rates.fetch_coin('dash')
-
+    cryptocurrencies = ["bitcoin",
+                        "ethereum",
+                        "litecoin",
+                        "monero",
+                        "ripple",
+                        "dash"]
+    
     result = ""
-    result = result + str(bitcoin[0]) + "  -  " + str(bitcoin[2].encode('utf-8')) + "\n"
-    result = result + str(ethereum[0]) + "  -  " + str(ethereum[2].encode('utf-8')) + "\n"
-    result = result + str(litecoin[0]) + "  -  " + str(litecoin[2].encode('utf-8')) + "\n"
-    result = result + str(monero[0]) + "  -  " + str(monero[2].encode('utf-8')) + "\n"
-    result = result + str(ripple[0]) + "  -  " + str(ripple[2].encode('utf-8')) + "\n"
-    result = result + str(dash[0]) + "  -  " + str(dash[2].encode('utf-8')) + "\n"
+    
+    for coin in cryptocurrencies:
+        rate = Rates.fetch_coin(coin)
+        result += "{} - {}\n".format(rate[0], rate[2].encode('utf-8'))
 
     print result
 
