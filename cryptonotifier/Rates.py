@@ -5,16 +5,18 @@ import requests
 def fetch_coin(coin):
     url = "https://www.coingecko.com/en/price_charts/"+coin+"/inr"
     headers = {'User-Agent': 'Mozilla/5.0'}
-    bitcoin_file = requests.get(url)
-    soup = BeautifulSoup(bitcoin_file.text, "html.parser")
+    crypto_file = requests.get(url)
+    soup = BeautifulSoup(crypto_file.text, "html.parser")
 
-    bitcoin_li = []
+    crypto_li = []
 
     for table in soup.find_all("table", attrs={"class" : "table"}):
         for td in table.find_all("td"):
-            bitcoin_li.append(td.text)
+            crypto_li.append(td.text)
 
-    del bitcoin_li[3:]
-    bitcoin_li = map(lambda s : s.strip(), bitcoin_li)
-    print bitcoin_li
-    return bitcoin_li
+    del crypto_li[3:]
+    crypto_li = map(lambda s : s.strip(), crypto_li)
+
+    print crypto_li
+
+    return crypto_li
