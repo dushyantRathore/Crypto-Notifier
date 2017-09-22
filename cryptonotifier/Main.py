@@ -6,12 +6,12 @@ def notify():
 
     icon_path = "/home/dushyant/Desktop/Github/Crypto-Notifier/logo.jpg"
 
-    bitcoin = Rates.fetch_bitcoin()
-    ethereum = Rates.fetch_ethereum()
-    litecoin = Rates.fetch_litecoin()
-    monero = Rates.fetch_monero()
-    ripple = Rates.fetch_ripple()
-    dash = Rates.fetch_dash()
+    bitcoin = Rates.fetch_coin('bitcoin')
+    ethereum = Rates.fetch_coin('ethereum')
+    litecoin = Rates.fetch_coin('litecoin')
+    monero = Rates.fetch_coin('monero')
+    ripple = Rates.fetch_coin('ripple')
+    dash = Rates.fetch_coin('dash')
 
     result = ""
     result = result + str(bitcoin[0]) + "  -  " + str(bitcoin[2].encode('utf-8')) + "\n"
