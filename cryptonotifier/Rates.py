@@ -2,8 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def fetch_coin(coin):
-    url = "https://www.coingecko.com/en/price_charts/"+coin+"/inr"
+def fetch_coin(coin, fiat):
+    url = "https://www.coingecko.com/en/price_charts/"+coin+"/"+fiat
     headers = {'User-Agent': 'Mozilla/5.0'}
     crypto_file = requests.get(url)
     soup = BeautifulSoup(crypto_file.text, "html.parser")
