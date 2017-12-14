@@ -16,7 +16,7 @@ def notify():
     result = ""
     
     for coin in cryptocurrencies:
-        rate = Rates.fetch_coin(coin)
+        rate = Rates.fetch_coin(coin, "inr")
         result += "{} - {}\n".format(coin, rate[1].encode('utf-8'))
 
     print result
