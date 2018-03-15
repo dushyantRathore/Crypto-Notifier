@@ -4,9 +4,9 @@ from setuptools import setup
 
 setup(
     name='Crypto-Notifier',
-    version='1.0.1',
-    description='Get the latest conversion rates of Cryptocurrencies to INR',
-    long_description='This python package notifies the user of the conversion rates of popular Cryptocurrencies',
+    version='1.0.3',
+    description='Get the latest rates of popular Cryptocurrencies',
+    long_description='This python package notifies the user of the current market rates of popular Cryptocurrencies',
     author='Dushyant Rathore',
     license='MIT',
     classifiers=[
@@ -24,6 +24,8 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.5',
     ],
     keywords="Cryptocurrency notifier",
     author_email='dushyant.bgs@gmail.com',
