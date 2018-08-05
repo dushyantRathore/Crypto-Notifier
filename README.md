@@ -19,7 +19,12 @@ To run the package, run `cryptonotifier` on the terminal.
 4. Run `python  Main.py`
 <br><br>
 
+**Installation from pypi**
+
+`pip install Crypto-Notify`
+
 **Requirements**
+* python 3
 * requests<=2.11.1
 * beautifulsoup4
 * notify2
