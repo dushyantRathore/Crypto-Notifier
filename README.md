@@ -1,5 +1,5 @@
 # Crypto-Notifier
-Desktop notification tool showing the latest crypotcurrency rates built for linux 
+Desktop notification tool showing the latest crypotcurrency rates built for linux OS
 using python. 
 <br><br>
 
